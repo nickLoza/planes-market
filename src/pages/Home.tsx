@@ -25,7 +25,7 @@ function Home() {
 					<p className="home__about-welcome">Welcome to AirBuy!
 					<SlPlane/></p>
 					<p className="home__about-description">
-						We appreciate you considering our site to buy your aircraft. If you're buying an plane or helicopter, AirBuy is the most trust and effective market to do it. No other website in U.S.A comes close in terms of usability, functionality and site traffic.
+						We appreciate you considering our site to buy your aircraft. If you're buying a plane or helicopter, AirBuy is the most reliable and cost-effective market to do it. No other website in U.S.A comes close in terms of usability, functionality and site traffic.
 					</p>
 				</section>
 			</div>
