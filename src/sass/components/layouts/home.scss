@@ -1,0 +1,173 @@
+@use "../vars/vars" as *;
+
+@mixin fontStyle($fz,$w){
+	font:{
+		size: $fz;
+		weight: $w;
+	}
+	color: $text-color-inverse;
+}
+
+
+.home{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	width: 100%;
+	min-height: 400px;
+	padding: 1rem 2.5rem;
+	max-width: 1200px;
+	margin: auto;
+	margin-top: 3rem;
+	@media screen and (max-width: 768px ){
+		padding: 1rem 0;
+	}
+	&__about{
+		width: 100%;
+		min-height: 400px; 
+		text-align: left;
+		padding: 4rem 2.5rem;
+		margin-top: 3rem;
+		border-top: 2px solid $secondary-color;
+		&-title{
+			@include fontStyle(2.1rem,400);
+			color: $text-color;
+		}
+		&-welcome{
+			display: flex;
+			align-items: center;
+			@include fontStyle(1.5rem,400);
+			color: $text-color;
+			margin: 2rem 0;
+			svg{
+				width: 2rem;
+				margin-left: 2rem;
+			}
+		}
+		&-description{
+			@include fontStyle(1.2rem,400);
+			color: $text-color;
+			max-width: 450px;
+		}
+		@media screen and (min-width: 980px ) {
+			&-title{
+				@include fontStyle(3.3rem,400);
+				color: $text-color;
+
+			}
+			&-welcome{
+				@include fontStyle(2.1rem,400);
+				color: $text-color;
+			}
+			&-description{
+				@include fontStyle(1.5rem,400);
+				color: $text-color;
+				max-width: 650px;
+			}
+		}
+	}
+	&__hero{
+		display: flex;
+		justify-content: space-between;
+		min-height: 400px;
+		max-width: 980px;
+		@media screen and (max-width: 980px ) {
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			gap: 2rem 0;
+		}
+		.text{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 50vw;
+			@media screen and (max-width: 980px) {
+				width: 80vw;
+			}
+			&__h2{
+				@include fontStyle(3.8rem,700);
+				color: $text-color;
+				text-shadow: 3px 3px #000;
+				margin-bottom: 1.9rem;
+			}
+			&__p{
+				@include fontStyle(1.3rem,600);
+				line-height: 1.2;
+				color: $text-color;
+			}
+			&__links{
+				display: flex;
+				width: 100%;
+				@media screen and (max-width: 980px) {
+					justify-content: center;
+				}
+			}
+			&__link{
+				text-transform: uppercase;
+				text-align: center;
+				@include fontStyle(2.5rem,700);
+				padding: .4rem .9rem;
+				margin-top: 2.4rem;
+				background-color: $text-color;
+				transition: background-color .2s ease-in-out, color .1s ease-in-out;
+				&:hover{
+					color: $text-color;
+					background-color: $text-color-inverse;
+				}
+			}
+			@media screen and (max-width: 980px) {
+				&__h2{
+					font-size: 2.4rem;
+				}
+				&__p{
+					font-size: 1rem;
+				}
+				&__link{
+					font-size: 2rem;
+				}
+			}
+		}
+
+		&-img{
+			height: 250px;
+			width: 50vw;
+			object-fit: contain;
+			align-self: flex-end;
+			@media screen and (max-width: 980px) {
+				width: 80vw;
+				align-self: flex-start;
+			}
+		}
+
+	}
+	&__kits{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 400px;
+		width: 100%;
+		@media screen and (max-width: 980px) {
+			flex-direction: column;
+			text-align: center;
+			gap: 5rem 0;
+		}
+		&-link{
+			@include fontStyle(1.7rem,700);
+			text-transform: uppercase;
+			padding: .4rem .9rem;
+			background-color: $text-color;
+			transition: background-color .2s ease-in-out, color .1s ease-in-out;
+			&:hover{
+				color: $text-color;
+				background-color: $text-color-inverse;
+			}
+		}
+		&-img{
+			height: 200px;
+			width: 40vw;
+			object-fit: cover;
+		}
+	}
+}
