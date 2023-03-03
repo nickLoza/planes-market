@@ -17,6 +17,16 @@ body{
 	min-height: 100vh;
 }
 
+.app{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__spinner{
+		margin-top: 40%;
+	}
+}
+
 .error-404{
 	text-align: center;
 	min-height: 100vh;
